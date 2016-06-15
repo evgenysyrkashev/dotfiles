@@ -5,6 +5,8 @@ set clipboard=unnamed
 filetype off
 syntax enable
 
+let mapleader=","
+
 " set omnifunc=syntaxcomplete"Complite
 
 " Search improvements
@@ -55,6 +57,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'wincent/command-t'
 
 call vundle#end()
 filetype plugin indent on
