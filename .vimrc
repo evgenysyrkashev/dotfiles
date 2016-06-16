@@ -65,6 +65,10 @@ filetype plugin indent on
 " NERDTree config
 let g:NERDTreeShowHidden=1    " show dotfiles
 
+" Command-T config
+let g:CommandTWildIgnore=&wildignore . ",**/node_modules"
+let g:CommandTWildIgnore=&wildignore . ",**/bower_components"
+
 " Syntastic
 " set statusline+=%"warningmsg"
 " set statusline+=%{SyntasticStatuslineFlag()}
