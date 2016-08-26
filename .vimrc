@@ -34,32 +34,24 @@ set visualbell
 set cursorline
 
 set colorcolumn=80
-set t_Co=256
+"set t_Co=256
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-" Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-" Plugin 'majutsushi/tagbar'
-" Plugin 'mattn/emmet-vim'
-Plugin 'Valloric/YouCompleteMe'
-" Plugin 'Valloric/MatchTagAlways'
-Plugin 'vim-airline/vim-airline'
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'vim-scripts/EasyGrep'
-" Plugin 'SirVer/ultisnips'
-" Plugin 'terryma/vim-multiple-cursors'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nikvdp/ejs-syntax'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'wincent/command-t'
-
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
+Plug 'vim-airline/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'nikvdp/ejs-syntax'
+Plug 'chriskempson/base16-vim'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
+    \ }
+call plug#end()
 filetype plugin indent on
 
 " NERDTree config
@@ -101,9 +93,12 @@ set laststatus=2
 "let g:solarized_termcolors=256
 " set colorcolumn=+1
 
-let g:rehash256 = 1
+"let g:rehash256 = 1
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+let base16colorspace=256
+colorscheme base16-solarized-dark
 
 " Toogle NERDTree
 map <F4> :NERDTreeToggle<CR>
