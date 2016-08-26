@@ -39,6 +39,10 @@ set colorcolumn=80
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
@@ -46,6 +50,7 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
+Plug 'moll/vim-node'
 Plug 'nikvdp/ejs-syntax'
 Plug 'chriskempson/base16-vim'
 Plug 'wincent/command-t', {
@@ -79,14 +84,19 @@ let g:syntastic_check_on_wq = 0
 " let g:UltiSnipsJumpForwardTrigger='<c-j>'
 " let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
-" Vim airline settings
-" let g:airline_left_sep = '⮀'
-" let g:airline_left_alt_sep = '⮁'
-" let g:airline_right_sep = '⮂'
-" let g:airline_right_alt_sep = '⮃'
-" let g:airline_fugitive_prefix = '⎇  '
-" let g:airline_readonly_symbol = '⭤'
-" let g:airline_linecolumn_prefix = '⭡'
+let g:airline_powerline_fonts = 1
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 set laststatus=2
 "set textwidth=80
