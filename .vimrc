@@ -53,6 +53,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'moll/vim-node'
 Plug 'nikvdp/ejs-syntax'
 Plug 'chriskempson/base16-vim'
+Plug 'nazo/pt.vim'  " brew install pt
 Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
     \ }
