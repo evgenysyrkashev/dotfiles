@@ -56,6 +56,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'nazo/pt.vim'  " brew install pt
 Plug 'maksimr/vim-jsbeautify'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
 Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
     \ }
@@ -80,6 +81,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'   " npm install -g eslint_d
 
 let g:syntastic_html_tidy_ignore_errors = [
     \ "proprietary attribute",
