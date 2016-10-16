@@ -57,6 +57,10 @@ Plug 'nazo/pt.vim'  " brew install pt
 Plug 'maksimr/vim-jsbeautify'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
+Plug 'SirVer/ultisnips'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'easymotion/vim-easymotion'
 Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
     \ }
@@ -96,9 +100,9 @@ let g:syntastic_html_tidy_ignore_errors = [
 "au FileType javascript call JavaScriptFold()
 
 " Remap UltiSnips
-" let g:UltiSnipsExpandTrigger='<c-j>'
-" let g:UltiSnipsJumpForwardTrigger='<c-j>'
-" let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+let g:UltiSnipsExpandTrigger='<C-j>'
+let g:UltiSnipsJumpForwardTrigger='<C-j>'
+let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
 let g:airline_powerline_fonts = 1
 
