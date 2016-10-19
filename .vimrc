@@ -68,6 +68,9 @@ Plug 'wincent/command-t', {
 call plug#end()
 filetype plugin indent on
 
+" Close autocompletion tip window when a selection is made
+autocmd CompleteDone * pclose
+
 " NERDTree config
 let g:NERDTreeShowHidden=1    " show dotfiles
 
