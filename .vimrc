@@ -62,6 +62,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'easymotion/vim-easymotion'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
     \ }
@@ -78,6 +81,12 @@ let g:NERDTreeShowHidden=1    " show dotfiles
 let g:CommandTWildIgnore=&wildignore . ",**/node_modules"
 let g:CommandTWildIgnore=&wildignore . ",**/bower_components"
 
+" YCM typescript autocopletion
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -90,6 +99,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'   " npm install -g eslint_d
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 let g:syntastic_html_tidy_ignore_errors = [
     \ "proprietary attribute",
