@@ -20,6 +20,11 @@ set backspace=indent,eol,start
 set ts=2 sts=2 sw=2 expandtab
 set spell spelllang=en_us
 
+set undofile
+set undodir=$HOME/.vim/undo//
+set undolevels=1000
+set undoreload=10000
+
 " Set automatic window resizing
 " set winwidth=84
 " set winheight=5
