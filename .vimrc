@@ -18,6 +18,7 @@ set fileencoding=utf-8
 set encoding=utf-8
 set backspace=indent,eol,start
 set ts=2 sts=2 sw=2 expandtab
+set spell spelllang=en_us
 
 " Set automatic window resizing
 " set winwidth=84
