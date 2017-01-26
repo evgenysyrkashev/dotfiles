@@ -84,8 +84,7 @@ autocmd CompleteDone * pclose
 let g:NERDTreeShowHidden=1    " show dotfiles
 
 " Command-T config
-let g:CommandTWildIgnore=&wildignore . ",**/node_modules"
-let g:CommandTWildIgnore=&wildignore . ",**/bower_components"
+let g:CommandTWildIgnore=&wildignore . ",**/node_modules,**/bower_components"
 
 " YCM typescript autocopletion
 if !exists("g:ycm_semantic_triggers")
